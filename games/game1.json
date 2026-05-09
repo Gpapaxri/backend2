@@ -1,0 +1,11 @@
+{
+  "GameName":"RoyalFlush",
+  "ProviderName": "Allwyn",
+  "Stars": 4,
+  "NoOfVotes": 5,
+  "GameLogo": "logos/royalflush.png",
+  "MinBet": 1,
+  "MaxBet": 100,
+  "RiskLevel": "High",
+  "HashKey": "G13ThU116P"
+}

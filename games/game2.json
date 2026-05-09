@@ -1,0 +1,11 @@
+{
+  "GameName":"LuckyDogs",
+  "ProviderName": "Allwyn",
+  "Stars": 4,
+  "NoOfVotes": 50,
+  "GameLogo": "logos/luckydogs.png",
+  "MinBet": 1,
+  "MaxBet": 30,
+  "RiskLevel": "High",
+  "HashKey": "mle12DYh67"
+}

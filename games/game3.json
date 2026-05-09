@@ -1,0 +1,11 @@
+{
+  "GameName":"WildWheels",
+  "ProviderName": "Allwyn",
+  "Stars": 5,
+  "NoOfVotes": 10,
+  "GameLogo": "logos/wildwheels.png",
+  "MinBet": 5,
+  "MaxBet": 200,
+  "RiskLevel": "Medium",
+  "HashKey": "aJV34Pac68"
+}

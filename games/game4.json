@@ -1,0 +1,11 @@
+{
+  "GameName":"GoldenRush",
+  "ProviderName": "Bet365",
+  "Stars": 4,
+  "NoOfVotes": 78,
+  "GameLogo": "logos/goldenrush.png",
+  "MinBet": 0.1,
+  "MaxBet": 70,
+  "RiskLevel": "Medium",
+  "HashKey": "gfT194dXIp"
+}

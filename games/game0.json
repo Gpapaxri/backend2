@@ -1,0 +1,11 @@
+{
+  "GameName":"LuckySpin",
+  "ProviderName": "Bet365",
+  "Stars": 3,
+  "NoOfVotes": 2,
+  "GameLogo": "logos/luckyspin.png",
+  "MinBet": 0.1,
+  "MaxBet": 10,
+  "RiskLevel": "Low",
+  "HashKey": "aB3Yhd13P9"
+}
