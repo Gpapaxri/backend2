@@ -84,7 +84,7 @@ public class MasterMain {
 
             Message m = new Message(MessageCode.AddGame,g);
 
-            m.setAttachment(logoBytes);/// ///////////////////
+            m.setAttachment(logoBytes);
 
             int socket = h(g.getGameName()) % num_workers;
 

@@ -27,8 +27,8 @@ public class MasterCommunicationHandler extends Thread{
                 new MasterGameHandlingThread(client, m).start();
             }else if(m.getCode() == MessageCode.LogIn || m.getCode() == MessageCode.SignIn || m.getCode() == MessageCode.UpdateWallet){
                 new MasterUserHandlingThread(client, m).start();
-            }else if (m.getCode() == MessageCode.GetLogo) { /// //////////////
-                new MasterLogoHandler(client, m).start(); ////////////////////////
+            }else if (m.getCode() == MessageCode.GetLogo) {
+                new MasterLogoHandler(client, m).start();
             }else if(m.getCode() == MessageCode.ReducerReply_Winnings_Losses || (m.getCode() == MessageCode.ReducerReply_Games)){
                 int mapId = m.getMapId();
 
