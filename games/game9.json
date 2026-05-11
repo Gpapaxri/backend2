@@ -3,7 +3,7 @@
   "ProviderName": "Kaisen",
   "Stars": 4,
   "NoOfVotes": 100,
-  "GameLogo": "",
+  "GameLogo": "logos/emeraldmines.png",
   "MinBet": 1,
   "MaxBet": 100,
   "RiskLevel": "High",

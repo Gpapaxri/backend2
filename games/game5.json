@@ -3,7 +3,7 @@
   "ProviderName": "GreekBet",
   "Stars": 4,
   "NoOfVotes": 122,
-  "GameLogo": "",
+  "GameLogo": "logos/cashflow.png",
   "MinBet": 5,
   "MaxBet": 100,
   "RiskLevel": "High",

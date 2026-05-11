@@ -1,6 +1,7 @@
 package Worker;
 
 import gr.softeng.distributedsystems.Entities.Message;
+import gr.softeng.distributedsystems.Entities.MessageCode;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -8,7 +9,6 @@ import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Base64;
 
 public class WorkerLogoHandler extends Thread {
     Socket client;
@@ -23,21 +23,22 @@ public class WorkerLogoHandler extends Thread {
     public void run() {
         String gameName = (String) m.getContent();
         try {
-            Path logoFile = Paths.get("workerLogos/" + gameName);
+            ObjectOutputStream oos = new ObjectOutputStream(client.getOutputStream());
 
+            Path logoFile = Paths.get("workerLogos/" + gameName);
             if (!Files.exists(logoFile)) {
+                oos.writeObject(new Message(MessageCode.GetLogo, null));
+                oos.flush();
                 client.close();
                 return;
             }
 
             byte[] fileBytes = Files.readAllBytes(logoFile);
-            String base64 = Base64.getEncoder().encodeToString(fileBytes);
 
-            ObjectOutputStream oss = new ObjectOutputStream(client.getOutputStream());
-            oss.writeUTF(base64);
-            oss.flush();
+            oos.writeObject(new Message(MessageCode.GetLogo, fileBytes));
+            oos.flush();
+
             client.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

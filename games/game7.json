@@ -3,7 +3,7 @@
   "ProviderName": "Bet365",
   "Stars": 5,
   "NoOfVotes": 59,
-  "GameLogo": "",
+  "GameLogo": "logos/goldenslots.png",
   "MinBet": 0.1,
   "MaxBet": 10,
   "RiskLevel": "Low",

@@ -69,7 +69,7 @@ public class ConsoleApp {
 
                 Message m = new Message(MessageCode.AddGame, g);
 
-                m.setAttachment(logoBytes);/// ///////////////////
+                m.setAttachment(logoBytes);
 
                 sendMessage(m);
 
@@ -157,7 +157,6 @@ public class ConsoleApp {
 
         master_details[0] =  map.get("Master").split(" ")[0];
         master_details[1] =  map.get("Master").split(" ")[1];
-
 
     }
 }

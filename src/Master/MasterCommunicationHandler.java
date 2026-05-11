@@ -47,7 +47,7 @@ public class MasterCommunicationHandler extends Thread{
                             }else {
                                 String result = (String) m.getContent();
 
-                                request.getOss().writeUTF(result);
+                                request.getOss().writeObject(result);
                             }
 
                             request.getOss().flush();

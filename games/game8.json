@@ -3,7 +3,7 @@
   "ProviderName": "GreekBet",
   "Stars": 2,
   "NoOfVotes": 184,
-  "GameLogo": "",
+  "GameLogo": "logos/piratesgold.png",
   "MinBet": 1,
   "MaxBet": 60,
   "RiskLevel": "Medium",

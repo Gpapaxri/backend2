@@ -3,7 +3,7 @@
   "ProviderName": "GreekBet",
   "Stars": 4,
   "NoOfVotes": 250,
-  "GameLogo": "",
+  "GameLogo": "logos/diamondexplosion.png",
   "MinBet": 0.1,
   "MaxBet": 60,
   "RiskLevel": "Low",
