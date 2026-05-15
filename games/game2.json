@@ -6,6 +6,6 @@
   "GameLogo": "logos/luckydogs.png",
   "MinBet": 1,
   "MaxBet": 30,
-  "RiskLevel": "High",
+  "RiskLevel": "Medium",
   "HashKey": "mle12DYh67"
 }

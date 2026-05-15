@@ -21,8 +21,10 @@ public class WorkerCommunicationHandler extends Thread{
 
             if(m.getCode() == MessageCode.AddGame || m.getCode() == MessageCode.ModifyGame || m.getCode() == MessageCode.RemoveGame || m.getCode() == MessageCode.PlayGame || m.getCode() == MessageCode.Rating || m.getCode() == MessageCode.LogIn || m.getCode() == MessageCode.SignIn || m.getCode() == MessageCode.UpdateWallet){
                 new WorkerGameThread(client, m).start();
-            }else if (m.getCode() == MessageCode.GetLogo) { /// ////////////
-                new WorkerLogoHandler(client, m).start(); ///////////////
+
+            }else if (m.getCode() == MessageCode.GetLogo) {
+                new WorkerLogoHandler(client, m).start();
+
             }else {
                 new Worker_Earnings_Losses_SearchThread(new Socket(WorkerMain.reducer[0], Integer.parseInt(WorkerMain.reducer[1])), m).start();
             }

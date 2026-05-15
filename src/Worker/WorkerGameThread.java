@@ -88,18 +88,18 @@ public class WorkerGameThread extends Thread{
             if(m.getCode() == MessageCode.AddGame) {
 
                 Game game = (Game) m.getContent();
-                /// /////////////////////
-                byte[] logoBytes = m.getAttachment();   // get the attachment
+
+                byte[] logoBytes = m.getAttachment();
 
                 if (logoBytes != null && logoBytes.length > 0) {
-                    // Determine file path
+
                     Path logoDir = Paths.get("workerLogos");
                     if (!Files.exists(logoDir)) Files.createDirectories(logoDir);
-                    String fileName = game.getGameLogo(); // e.g., "goldenslots.png"
+                    String fileName = game.getGameLogo();
                     Path logoFile = logoDir.resolve(fileName);
                     Files.write(logoFile, logoBytes);
                 }
-                /// //////////////////////////
+
                 synchronized (WorkerMain.games){
                     if(!WorkerMain.games.contains(game)){
                         WorkerMain.games.add(game);
@@ -131,6 +131,17 @@ public class WorkerGameThread extends Thread{
                 Game g = (Game) m.getContent();
 
                 String answer = "The game doesn't exist.";
+
+                byte[] logoBytes = m.getAttachment();
+
+                if (logoBytes != null && logoBytes.length > 0) {
+
+                    Path logoDir = Paths.get("workerLogos");
+                    if (!Files.exists(logoDir)) Files.createDirectories(logoDir);
+                    String fileName = g.getGameLogo();
+                    Path logoFile = logoDir.resolve(fileName);
+                    Files.write(logoFile, logoBytes);
+                }
 
                 synchronized (WorkerMain.games) {
                     for (Game game : WorkerMain.games) {

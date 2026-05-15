@@ -100,11 +100,13 @@ public class ConsoleApp {
                     throw new RuntimeException(e);
                 }
 
-                String logo = Base64.getEncoder().encodeToString(logoBytes);
+                String logo = Paths.get(map.get("GameLogo")).getFileName().toString();
 
                 Game g = new Game(map.get("GameName"), map.get("ProviderName"), Integer.parseInt(map.get("Stars")), Integer.parseInt(map.get("NoOfVotes")),logo, Double.parseDouble(map.get("MinBet")), Double.parseDouble(map.get("MaxBet")), map.get("RiskLevel"), map.get("HashKey"));
 
                 Message m = new Message(MessageCode.ModifyGame,g);
+
+                m.setAttachment(logoBytes);
 
                 sendMessage(m);
 
